@@ -9,7 +9,14 @@
 //
 
 const redacted = (arr) => {
-  // Insert missing solution please
+  let newAr = arr.map(element =>{
+    if(typeof(element) === "string"){
+      return element.replace(element , "redacted");
+    } else {
+      return element;
+    }
+  })
+  return newAr;
 };
 
 // Part 2 - Test

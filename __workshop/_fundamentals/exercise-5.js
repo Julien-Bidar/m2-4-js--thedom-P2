@@ -8,7 +8,23 @@
 // - If no arguments are passed, return `undefined`
 
 const addNumbers = (...nums) => {
-  // Insert missing solution please
+  let count = 0
+  if(nums.length === 0){
+    return undefined;
+  };
+  const newAr = nums.filter((num) => {
+    if(typeof(num) === "number"){
+      return num;
+    }
+  });
+
+  const squared = newAr.map((item) => {
+    return item * item;
+  })
+  squared.forEach((squareNum) => {
+    count += squareNum;
+  });
+  return count;
 };
 
 // Part 2 - Test

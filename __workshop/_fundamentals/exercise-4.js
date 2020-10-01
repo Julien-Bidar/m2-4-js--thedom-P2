@@ -11,7 +11,14 @@
 // - If the value of that key is not a number, ignore it, The function shouldn't break.
 
 const count = (arr, key) => {
-  // Insert missing solution please
+  let count = 0
+  
+  arr.forEach(item =>{
+    if(item[key] && typeof item[key] === "number"){
+      count += item[key];
+    }
+  })
+  return count
 };
 
 // Part 2 - Test

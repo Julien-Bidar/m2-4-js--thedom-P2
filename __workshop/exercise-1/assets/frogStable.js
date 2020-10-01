@@ -25,3 +25,5 @@ const frogstable = [
     number: "8",
   },
 ];
+
+//module.export = frogstable

@@ -10,6 +10,10 @@ test("Exercise 1", () => {
     "4",
     "5",
   ]);
+  expect(convertToString([])).toStrictEqual([]);
+  expect(convertToString(["Hey", 22, "there"])).toStrictEqual(["Hey", "22", "there"]);
+  expect(convertToString([0])).toStrictEqual(["0"]);
+
   // add more tests here...
 });
 

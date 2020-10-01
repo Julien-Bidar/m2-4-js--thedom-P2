@@ -27,7 +27,22 @@
 // solution comes more quickly :)
 
 const uniqueElements = (arr1, arr2) => {
-  // Your code here
+  let newAr = []
+  arr1.filter((num) => {
+    if(arr2.includes(num)){
+      console.log("included")
+    }else{
+      newAr.push(num);
+    }
+  })
+  arr2.filter((item) => {
+    if(arr1.includes(item)){
+      console.log("included")
+    }else{
+      newAr.push(item);
+    }
+  })
+  return newAr
 };
 
 // Part 2 - Test

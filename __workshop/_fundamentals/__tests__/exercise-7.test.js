@@ -10,6 +10,48 @@ test("Exercise 7", () => {
         { name: "liv", age: 36 },
         { name: "dave", age: 43 },
       ],
+      { isAvailable: true, location: "Montreal" }
+    )
+  ).toStrictEqual([
+    { name: "chris", age: 23, isAvailable: true, location: "Montreal" },
+    { name: "liv", age: 36, isAvailable: true, location: "Montreal" },
+    { name: "dave", age: 43, isAvailable: true, location: "Montreal" },
+  ]);
+  expect(
+    addValues(
+      [
+        { name: "chris", age: 23 },
+        { name: "liv", age: 36 },
+        { name: "dave", age: 43 },
+      ],
+      { isAvailable: true }
+    )
+  ).toStrictEqual([
+    { name: "chris", age: 23, isAvailable: true },
+    { name: "liv", age: 36, isAvailable: true },
+    { name: "dave", age: 43, isAvailable: true },
+  ]);
+  expect(
+    addValues(
+      [
+        { name: "chris", age: 23 },
+        { name: "liv", age: 36 },
+        { name: "dave", age: 43 },
+      ],
+      { isAvailable: true }
+    )
+  ).toStrictEqual([
+    { name: "chris", age: 23, isAvailable: true },
+    { name: "liv", age: 36, isAvailable: true },
+    { name: "dave", age: 43, isAvailable: true },
+  ]);
+  expect(
+    addValues(
+      [
+        { name: "chris", age: 23 },
+        { name: "liv", age: 36 },
+        { name: "dave", age: 43 },
+      ],
       { isAvailable: true }
     )
   ).toStrictEqual([
